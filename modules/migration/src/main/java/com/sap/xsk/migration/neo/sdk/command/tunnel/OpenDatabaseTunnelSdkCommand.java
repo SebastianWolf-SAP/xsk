@@ -16,10 +16,11 @@ import com.google.gson.reflect.TypeToken;
 import com.sap.xsk.migration.neo.sdk.command.AbstractSdkCommand;
 import com.sap.xsk.migration.neo.sdk.command.SdkCommandParsedOutput;
 import com.sap.xsk.migration.tooling.MigrationToolExecutor;
+
 import javax.inject.Inject;
 import java.util.List;
 
-class OpenDatabaseTunnelSdkCommand extends AbstractSdkCommand<OpenDatabaseTunnelSdkCommandArgs, OpenDatabaseTunnelSdkCommandRes> {
+public class OpenDatabaseTunnelSdkCommand extends AbstractSdkCommand<OpenDatabaseTunnelSdkCommandArgs, OpenDatabaseTunnelSdkCommandRes> {
 
   private static final String OPEN_DATABASE_TUNNEL_COMMAND_NAME = "open-db-tunnel";
 

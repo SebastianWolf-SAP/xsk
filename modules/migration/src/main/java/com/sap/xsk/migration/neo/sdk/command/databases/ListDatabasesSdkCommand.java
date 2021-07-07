@@ -17,12 +17,13 @@ import com.sap.xsk.migration.neo.sdk.command.AbstractSdkCommand;
 import com.sap.xsk.migration.neo.sdk.command.SdkCommandGenericArgs;
 import com.sap.xsk.migration.neo.sdk.command.SdkCommandParsedOutput;
 import com.sap.xsk.migration.tooling.MigrationToolExecutor;
+
 import javax.inject.Inject;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-class ListDatabasesSdkCommand extends AbstractSdkCommand<SdkCommandGenericArgs, ListDatabasesSdkCommandRes> {
+public class ListDatabasesSdkCommand extends AbstractSdkCommand<SdkCommandGenericArgs, ListDatabasesSdkCommandRes> {
 
   private static final String LIST_DATABASES_COMMAND_NAME = "list-dbs";
 

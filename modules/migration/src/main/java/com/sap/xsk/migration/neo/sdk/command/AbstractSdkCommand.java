@@ -13,22 +13,13 @@ package com.sap.xsk.migration.neo.sdk.command;
 
 import com.sap.xsk.migration.tooling.MigrationToolExecutor;
 import javax.inject.Inject;
-import java.util.ArrayList;
-import java.util.List;
 
-public abstract class AbstractSdkCommand<TArgs extends SdkCommandArgs, TRes extends SdkCommandRes> implements SdkCommand<TArgs, TRes> {
+public abstract class AbstractSdkCommand<TArgs extends SdkCommandArgs, TRes> implements SdkCommand<TArgs, TRes> {
 
   protected final MigrationToolExecutor migrationToolExecutor;
 
   @Inject
   public AbstractSdkCommand(MigrationToolExecutor migrationToolExecutor) {
-    this.migrationToolExecutor = migrationToolExecutor;;
-  }
-
-  protected List<String> createProcessCommandAndArguments(SdkCommandArgs commandArgs, String concreteCommandName) {
-    var commandAndArguments = new ArrayList<>(NEO_SDK_JAVA8_COMMAND_AND_ARGUMENTS);
-    commandAndArguments.add(concreteCommandName);
-    commandAndArguments.addAll(commandArgs.commandLineArgs());
-    return commandAndArguments;
+    this.migrationToolExecutor = migrationToolExecutor;
   }
 }
